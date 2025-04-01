@@ -27,6 +27,35 @@
             <div class="header-shape"></div>
         </header>
         
+        <!-- New Preview Whiteboard Section -->
+        <section class="preview-section" id="previewSection">
+            <div class="preview-container">
+                <div class="preview-header">
+                    <h2>Effect Preview</h2>
+                    <div class="preview-controls">
+                        <button id="viewCodeBtn"><i class="fas fa-code"></i> View Code</button>
+                        <button id="closePreviewBtn"><i class="fas fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="preview-whiteboard" id="previewWhiteboard">
+                    <div class="whiteboard-placeholder">
+                        <i class="fas fa-hand-pointer"></i>
+                        <p>Click on any effect to preview it here</p>
+                    </div>
+                </div>
+                <div class="preview-code" id="previewCode">
+                    <div class="code-tabs">
+                        <button class="code-tab active" data-tab="html">HTML</button>
+                        <button class="code-tab" data-tab="css">CSS</button>
+                        <button class="code-tab" data-tab="js">JavaScript</button>
+                    </div>
+                    <div class="code-content">
+                        <pre><code id="codeDisplay"></code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <main class="effects-grid">
             <div class="category">
                 <div class="category-header">
@@ -34,15 +63,15 @@
                     <h2>Button Animations</h2>
                 </div>
                 <div class="effects-list">
-                    <a href="button_effects/glow_button/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="button_effects/glow_button">
                         <div class="effect-icon"><i class="fas fa-lightbulb"></i></div>
                         <span>Glow Button</span>
                     </a>
-                    <a href="button_effects/pulse_button/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="button_effects/pulse_button">
                         <div class="effect-icon"><i class="fas fa-heartbeat"></i></div>
                         <span>Pulse Button</span>
                     </a>
-                    <a href="button_effects/fill_button/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="button_effects/fill_button">
                         <div class="effect-icon"><i class="fas fa-fill-drip"></i></div>
                         <span>Fill Button</span>
                     </a>
@@ -55,15 +84,15 @@
                     <h2>Gallery Sliders</h2>
                 </div>
                 <div class="effects-list">
-                    <a href="gallery_sliders/fade_slider/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="gallery_sliders/fade_slider">
                         <div class="effect-icon"><i class="fas fa-adjust"></i></div>
                         <span>Fade Slider</span>
                     </a>
-                    <a href="gallery_sliders/3d_cube/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="gallery_sliders/3d_cube">
                         <div class="effect-icon"><i class="fas fa-cube"></i></div>
                         <span>3D Cube Slider</span>
                     </a>
-                    <a href="gallery_sliders/carousel/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="gallery_sliders/carousel">
                         <div class="effect-icon"><i class="fas fa-sync"></i></div>
                         <span>Carousel Slider</span>
                     </a>
@@ -76,15 +105,15 @@
                     <h2>Background Effects</h2>
                 </div>
                 <div class="effects-list">
-                    <a href="background_effects/particles/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="background_effects/particles">
                         <div class="effect-icon"><i class="fas fa-atom"></i></div>
                         <span>Particles Background</span>
                     </a>
-                    <a href="background_effects/gradient_wave/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="background_effects/gradient_wave">
                         <div class="effect-icon"><i class="fas fa-water"></i></div>
                         <span>Gradient Wave</span>
                     </a>
-                    <a href="background_effects/animated_patterns/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="background_effects/animated_patterns">
                         <div class="effect-icon"><i class="fas fa-layer-group"></i></div>
                         <span>Animated Patterns</span>
                     </a>
@@ -97,15 +126,15 @@
                     <h2>3D Effects</h2>
                 </div>
                 <div class="effects-list">
-                    <a href="3d_effects/card_flip/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="3d_effects/card_flip">
                         <div class="effect-icon"><i class="fas fa-undo"></i></div>
                         <span>Card Flip</span>
                     </a>
-                    <a href="3d_effects/perspective_hover/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="3d_effects/perspective_hover">
                         <div class="effect-icon"><i class="fas fa-mouse-pointer"></i></div>
                         <span>Perspective Hover</span>
                     </a>
-                    <a href="3d_effects/3d_cube/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="3d_effects/3d_cube">
                         <div class="effect-icon"><i class="fas fa-cube"></i></div>
                         <span>3D Cube</span>
                     </a>
@@ -118,15 +147,15 @@
                     <h2>Text Animations</h2>
                 </div>
                 <div class="effects-list">
-                    <a href="text_animations/typing_effect/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="text_animations/typing_effect">
                         <div class="effect-icon"><i class="fas fa-keyboard"></i></div>
                         <span>Typing Effect</span>
                     </a>
-                    <a href="text_animations/text_reveal/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="text_animations/text_reveal">
                         <div class="effect-icon"><i class="fas fa-mask"></i></div>
                         <span>Text Reveal</span>
                     </a>
-                    <a href="text_animations/glitch_text/index.html" class="effect-card">
+                    <a href="#" class="effect-card" data-effect="text_animations/glitch_text">
                         <div class="effect-icon"><i class="fas fa-bolt"></i></div>
                         <span>Glitch Text</span>
                     </a>
