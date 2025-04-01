@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #333;
+    padding: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.demo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    margin: 30px 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Typing Effect Styles */
+.typing-container {
+    display: inline-block;
+}
+
+.typing-text {
+    overflow: hidden;
+    border-right: 0.15em solid #3498db;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #2c3e50;
+    animation: 
+        typing 3.5s steps(30, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3498db; }
+}
+
+/* Code Section Styles */
+.code-section {
+    margin-top: 40px;
+}
+
+.code-section h2 {
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+pre {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}

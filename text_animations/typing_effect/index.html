@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Text Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-link">← Back to Main Page</a>
+    
+    <div class="container">
+        <h1>Typing Text Effect</h1>
+        
+        <div class="demo-area">
+            <div class="typing-container">
+                <span class="typing-text">Welcome to my website!</span>
+            </div>
+        </div>
+        
+        <div class="code-section">
+            <h2>How to use:</h2>
+            <pre><code class="html">
+&lt;div class="typing-container"&gt;
+    &lt;span class="typing-text"&gt;Welcome to my website!&lt;/span&gt;
+&lt;/div&gt;
+            </code></pre>
+            
+            <pre><code class="css">
+.typing-container {
+    display: inline-block;
+}
+
+.typing-text {
+    overflow: hidden;
+    border-right: 0.15em solid #3498db;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    animation: 
+        typing 3.5s steps(30, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #3498db; }
+}
+            </code></pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

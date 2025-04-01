@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Patterns Background Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-link">← Back to Main Page</a>
+    
+    <div class="animated-pattern-bg">
+        <div class="pattern pattern-1"></div>
+        <div class="pattern pattern-2"></div>
+        <div class="pattern pattern-3"></div>
+    </div>
+    
+    <div class="content">
+        <div class="container">
+            <h1>Animated Patterns Background Effect</h1>
+            
+            <div class="demo-description">
+                <p>Create dynamic geometric patterns that move and interact with each other to create an eye-catching animated background.</p>
+            </div>
+            
+            <div class="code-section">
+                <h2>How to use:</h2>
+                <pre><code class="html">
+&lt;div class="animated-pattern-bg"&gt;
+    &lt;div class="pattern pattern-1"&gt;&lt;/div&gt;
+    &lt;div class="pattern pattern-2"&gt;&lt;/div&gt;
+    &lt;div class="pattern pattern-3"&gt;&lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+                
+                <pre><code class="css">
+.animated-pattern-bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1a1a2e;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.pattern {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.4;
+}
+
+.pattern-1 {
+    width: 60vmax;
+    height: 60vmax;
+    background: repeating-linear-gradient(
+        45deg, 
+        rgba(255, 0, 128, 0.5), 
+        rgba(255, 0, 128, 0.5) 15px, 
+        rgba(0, 0, 0, 0) 15px, 
+        rgba(0, 0, 0, 0) 30px
+    );
+    top: -20vmax;
+    left: -20vmax;
+    animation: float 12s infinite linear;
+}
+
+.pattern-2 {
+    width: 80vmax;
+    height: 80vmax;
+    background: repeating-radial-gradient(
+        circle,
+        rgba(28, 232, 181, 0.6),
+        rgba(28, 232, 181, 0.6) 10px,
+        rgba(0, 0, 0, 0) 10px,
+        rgba(0, 0, 0, 0) 20px
+    );
+    bottom: -30vmax;
+    right: -30vmax;
+    animation: float 15s infinite linear reverse;
+}
+
+.pattern-3 {
+    width: 70vmax;
+    height: 70vmax;
+    background: repeating-conic-gradient(
+        rgba(64, 93, 230, 0.7) 0deg,
+        rgba(64, 93, 230, 0.7) 10deg,
+        rgba(0, 0, 0, 0) 10deg,
+        rgba(0, 0, 0, 0) 20deg
+    );
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s infinite linear;
+}
+
+@keyframes float {
+    from { transform: rotate(0deg) translateY(0) rotate(0deg); }
+    to { transform: rotate(360deg) translateY(5vh) rotate(-360deg); }
+}
+
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

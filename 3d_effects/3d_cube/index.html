@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Cube Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-link">← Back to Main Page</a>
+    
+    <div class="container">
+        <h1>3D Cube Effect</h1>
+        
+        <div class="demo-area">
+            <div class="scene">
+                <div class="cube">
+                    <div class="cube-face front">Front</div>
+                    <div class="cube-face back">Back</div>
+                    <div class="cube-face right">Right</div>
+                    <div class="cube-face left">Left</div>
+                    <div class="cube-face top">Top</div>
+                    <div class="cube-face bottom">Bottom</div>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="rotate-btn" data-direction="front">Front</button>
+                <button class="rotate-btn" data-direction="back">Back</button>
+                <button class="rotate-btn" data-direction="right">Right</button>
+                <button class="rotate-btn" data-direction="left">Left</button>
+                <button class="rotate-btn" data-direction="top">Top</button>
+                <button class="rotate-btn" data-direction="bottom">Bottom</button>
+            </div>
+        </div>
+        
+        <div class="code-section">
+            <h2>How to use:</h2>
+            <pre><code class="html">
+&lt;div class="scene"&gt;
+    &lt;div class="cube"&gt;
+        &lt;div class="cube-face front"&gt;Front&lt;/div&gt;
+        &lt;div class="cube-face back"&gt;Back&lt;/div&gt;
+        &lt;div class="cube-face right"&gt;Right&lt;/div&gt;
+        &lt;div class="cube-face left"&gt;Left&lt;/div&gt;
+        &lt;div class="cube-face top"&gt;Top&lt;/div&gt;
+        &lt;div class="cube-face bottom"&gt;Bottom&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            
+            <pre><code class="css">
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 600px;
+    margin: 0 auto;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.cube-face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.front  { 
+    background: rgba(90, 90, 230, 0.7); 
+    transform: rotateY(0deg) translateZ(100px); 
+}
+.back   { 
+    background: rgba(230, 90, 90, 0.7); 
+    transform: rotateY(180deg) translateZ(100px); 
+}
+.right  { 
+    background: rgba(90, 230, 90, 0.7); 
+    transform: rotateY(90deg) translateZ(100px); 
+}
+.left   { 
+    background: rgba(230, 230, 90, 0.7); 
+    transform: rotateY(-90deg) translateZ(100px); 
+}
+.top    { 
+    background: rgba(230, 90, 230, 0.7); 
+    transform: rotateX(90deg) translateZ(100px); 
+}
+.bottom { 
+    background: rgba(90, 230, 230, 0.7); 
+    transform: rotateX(-90deg) translateZ(100px); 
+}
+
+/* State classes for cube rotation */
+.show-front  { transform: translateZ(-100px) rotateY(0deg); }
+.show-back   { transform: translateZ(-100px) rotateY(180deg); }
+.show-right  { transform: translateZ(-100px) rotateY(-90deg); }
+.show-left   { transform: translateZ(-100px) rotateY(90deg); }
+.show-top    { transform: translateZ(-100px) rotateX(-90deg); }
+.show-bottom { transform: translateZ(-100px) rotateX(90deg); }
+            </code></pre>
+            
+            <pre><code class="javascript">
+document.addEventListener('DOMContentLoaded', function() {
+    const cube = document.querySelector('.cube');
+    const buttons = document.querySelectorAll('.rotate-btn');
+    
+    // Set initial state
+    cube.classList.add('show-front');
+    
+    // Add click event to buttons
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const direction = this.getAttribute('data-direction');
+            
+            // Remove all state classes
+            cube.className = 'cube';
+            
+            // Add the appropriate state class
+            cube.classList.add(`show-${direction}`);
+        });
+    });
+});
+            </code></pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

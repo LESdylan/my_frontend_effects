@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Wave Background Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-link">← Back to Main Page</a>
+    
+    <div class="gradient-wave-bg"></div>
+    
+    <div class="content">
+        <div class="container">
+            <h1>Gradient Wave Background Effect</h1>
+            
+            <div class="demo-description">
+                <p>An animated gradient background with a flowing wave-like movement that creates a dynamic and engaging backdrop for your content.</p>
+            </div>
+            
+            <div class="code-section">
+                <h2>How to use:</h2>
+                <pre><code class="html">
+&lt;div class="gradient-wave-bg"&gt;&lt;/div&gt;
+                </code></pre>
+                
+                <pre><code class="css">
+.gradient-wave-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #6a11cb, #2575fc, #00a1ff, #39c1b6);
+    background-size: 400% 400%;
+    z-index: -1;
+    animation: gradientWave 15s ease infinite;
+}
+
+@keyframes gradientWave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+                </code></pre>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

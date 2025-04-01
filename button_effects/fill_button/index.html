@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill Button Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-link">← Back to Main Page</a>
+    
+    <div class="container">
+        <h1>Fill Button Effect</h1>
+        
+        <div class="demo-area">
+            <button class="fill-button">Hover Me</button>
+        </div>
+        
+        <div class="code-section">
+            <h2>How to use:</h2>
+            <pre><code class="html">
+&lt;button class="fill-button"&gt;Hover Me&lt;/button&gt;
+            </code></pre>
+            
+            <pre><code class="css">
+.fill-button {
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #9b59b6;
+    border: 2px solid #9b59b6;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+
+.fill-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #9b59b6;
+    z-index: -1;
+    transition: width 0.4s ease-in-out;
+}
+
+.fill-button:hover {
+    color: white;
+}
+
+.fill-button:hover::before {
+    width: 100%;
+}
+            </code></pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
