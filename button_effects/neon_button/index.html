@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Button Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-link">← Back to Main Page</a>
+    
+    <div class="container">
+        <h1>Neon Button Effect</h1>
+        
+        <div class="demo-area">
+            <button class="neon-button">NEON GLOW</button>
+        </div>
+        
+        <div class="code-section">
+            <h2>How to use:</h2>
+            <pre><code class="html">
+&lt;button class="neon-button"&gt;NEON GLOW&lt;/button&gt;
+            </code></pre>
+            
+            <pre><code class="css">
+.neon-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 24px;
+  color: #00FFFC;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #00FFFC;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 3px;
+  overflow: hidden;
+  transition: 0.2s;
+  box-shadow: 
+    0 0 5px #00FFFC,
+    0 0 5px #00FFFC inset;
+  text-shadow: 0 0 2px #00FFFC;
+}
+
+.neon-button:hover {
+  background-color: #00FFFC;
+  color: #111;
+  box-shadow: 
+    0 0 10px #00FFFC,
+    0 0 30px #00FFFC,
+    0 0 50px #00FFFC;
+  text-shadow: none;
+}
+
+.neon-button:active {
+  transform: scale(0.95);
+}
+            </code></pre>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

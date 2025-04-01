@@ -1,0 +1,135 @@
+{
+  "categories": [
+    {
+      "id": "button_effects",
+      "name": "Button Animations",
+      "icon": "fas fa-square-full",
+      "effects": [
+        {
+          "id": "glow_button",
+          "name": "Glow Button",
+          "icon": "fas fa-lightbulb",
+          "description": "A button that glows when hovered"
+        },
+        {
+          "id": "pulse_button",
+          "name": "Pulse Button",
+          "icon": "fas fa-heartbeat",
+          "description": "A button that pulses with a subtle animation when hovered"
+        },
+        {
+          "id": "fill_button",
+          "name": "Fill Button",
+          "icon": "fas fa-fill-drip",
+          "description": "A button that fills with color from left to right on hover"
+        },
+        {
+          "id": "neon_button",
+          "name": "Neon Button",
+          "icon": "fas fa-bolt",
+          "description": "A button with bright neon glow effect like a neon sign"
+        }
+      ]
+    },
+    {
+      "id": "gallery_sliders",
+      "name": "Gallery Sliders",
+      "icon": "fas fa-images",
+      "effects": [
+        {
+          "id": "fade_slider",
+          "name": "Fade Slider",
+          "icon": "fas fa-adjust",
+          "description": "A gallery slider that transitions between images with a fade effect"
+        },
+        {
+          "id": "3d_cube",
+          "name": "3D Cube Slider",
+          "icon": "fas fa-cube",
+          "description": "A gallery slider that rotates a 3D cube to show different images"
+        },
+        {
+          "id": "carousel",
+          "name": "Carousel Slider",
+          "icon": "fas fa-sync",
+          "description": "A traditional horizontal sliding carousel for image galleries"
+        }
+      ]
+    },
+    {
+      "id": "background_effects",
+      "name": "Background Effects",
+      "icon": "fas fa-paint-brush",
+      "effects": [
+        {
+          "id": "particles",
+          "name": "Particles Background",
+          "icon": "fas fa-atom",
+          "description": "An interactive particle background that responds to mouse movement"
+        },
+        {
+          "id": "gradient_wave",
+          "name": "Gradient Wave",
+          "icon": "fas fa-water",
+          "description": "A flowing gradient background with animated wave-like movements"
+        },
+        {
+          "id": "animated_patterns",
+          "name": "Animated Patterns",
+          "icon": "fas fa-layer-group",
+          "description": "Dynamic geometric patterns that create an eye-catching background"
+        }
+      ]
+    },
+    {
+      "id": "3d_effects",
+      "name": "3D Effects",
+      "icon": "fas fa-cubes",
+      "effects": [
+        {
+          "id": "card_flip",
+          "name": "Card Flip",
+          "icon": "fas fa-undo",
+          "description": "A card that flips to reveal content on the back side"
+        },
+        {
+          "id": "perspective_hover",
+          "name": "Perspective Hover",
+          "icon": "fas fa-mouse-pointer",
+          "description": "An element that changes perspective based on mouse position"
+        },
+        {
+          "id": "3d_cube",
+          "name": "3D Cube",
+          "icon": "fas fa-cube",
+          "description": "A 3D cube that can be rotated to show different sides"
+        }
+      ]
+    },
+    {
+      "id": "text_animations",
+      "name": "Text Animations",
+      "icon": "fas fa-text-height",
+      "effects": [
+        {
+          "id": "typing_effect",
+          "name": "Typing Effect",
+          "icon": "fas fa-keyboard",
+          "description": "Text that appears as if it's being typed in real-time"
+        },
+        {
+          "id": "text_reveal",
+          "name": "Text Reveal",
+          "icon": "fas fa-mask",
+          "description": "Text that is revealed with a stylish animation"
+        },
+        {
+          "id": "glitch_text",
+          "name": "Glitch Text",
+          "icon": "fas fa-bolt",
+          "description": "Text with a digital glitch effect that creates visual distortion"
+        }
+      ]
+    }
+  ]
+}
